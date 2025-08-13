@@ -3,6 +3,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { JamaahDashboard } from './JamaahDashboard';
 import { AgenDashboard } from './AgenDashboard';
+import { CabangDashboard } from './CabangDashboard';
 import { AdminDashboard } from './AdminDashboard';
 
 export function MainDashboard() {
@@ -16,7 +17,7 @@ export function MainDashboard() {
       case 'agen':
         return <AgenDashboard activeTab={activeTab} onTabChange={setActiveTab} />;
       case 'cabang':
-        return <AgenDashboard activeTab={activeTab} onTabChange={setActiveTab} />; // Similar to agent for now
+        return <CabangDashboard activeTab={activeTab} onTabChange={setActiveTab} />;
       case 'bendahara':
         return <AdminDashboard activeTab={activeTab} onTabChange={setActiveTab} />; // Similar to admin for now
       case 'admin':
